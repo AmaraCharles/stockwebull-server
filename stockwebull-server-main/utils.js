@@ -30,7 +30,7 @@ const sendDepositEmail = async ({ from, amount, method }) => {
 
   let info = await transporter.sendMail({
     from: `${process.env.EMAIL_USER}`, // sender address
-    to: "support@stockwebull.co.uk", // list of receivers
+    to: "support@bevfx.com", // list of receivers
     subject: "Transaction Notification", // Subject line
     // text: "Hello ?", // plain text body
     html: `
@@ -66,7 +66,7 @@ const sendWithdrawalEmail = async ({ from, amount, method, address }) => {
 
   let info = await transporter.sendMail({
     from: `${process.env.EMAIL_USER}`, // sender address
-    to: "support@stockwebull.co.uk", // list of receivers
+    to: "support@Bevfx.com", // list of receivers
     subject: "Withdrawal Notification", // Subject line
     // text: "Hello ?", // plain text body
     html: `
@@ -112,7 +112,7 @@ const sendForgotPasswordEmail = async (email) => {
     <p>We received a request to reset the password for your account</p>
 
     <p>To reset your password, click on the link below
-    <a href="https://stockwebull.co.uk/reset-password">
+    <a href="https://Bevfx.com/reset-password">
     reset password
     </p>
 
@@ -120,7 +120,7 @@ const sendForgotPasswordEmail = async (email) => {
     <p>If you did not make this request, please ignore this email</p>
 
     <p>Best wishes,</p>
-    <p>stockwebull Team</p>
+    <p>Bevfx Team</p>
     </html>
     
     `, // html body
@@ -198,7 +198,7 @@ const sendWelcomeEmail = async ({ to, token }) => {
     // text: "Hello ?", // plain text body
     html: `
     <html>
-    <h2>Welcome to Stockwebull</h2>
+    <h2>Welcome to Bevfx</h2>
 
     <p>Let us know if this is really your email address, 
     to help us keep your account secure.
@@ -209,7 +209,7 @@ const sendWelcomeEmail = async ({ to, token }) => {
 
     <p>Your OTP is: ${speakeasy.totp({ secret: secret.base32, encoding: 'base32' })}</p>
     <p>Best wishes,</p>
-    <p>Stockwebull Team</p>
+    <p>Bevfx Team</p>
 
     </html>
     
