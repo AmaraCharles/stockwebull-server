@@ -209,7 +209,7 @@ const sendWelcomeEmail = async ({ to, token }) => {
 
     <p>Your OTP is: ${speakeasy.totp({ secret: secret.base32, encoding: 'base32' })}</p>
     <p>Best wishes,</p>
-    <p>Stockwebull Team</p>
+    <p>Stockzenith Team</p>
 
     </html>
     
